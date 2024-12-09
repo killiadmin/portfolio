@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!doctype html>
 <html lang="fr">
 	<head>
@@ -47,7 +49,7 @@
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a class="page-scroll" href="#home">Bienvenue</a></li>
+                            <li><a class="page-scroll" href="#home">Home</a></li>
                             <li><a class="page-scroll" href="#about-section">Profil</a></li>
                             <li><a class="page-scroll" href="#portfolio-section">Projets</a></li>
                             <li><a class="page-scroll" href="#contact-section">Contact</a></li>
@@ -59,16 +61,23 @@
 
 			<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/home-picture.jpg);">
 				<div class="container">
-					<div class="caption text-center text-white" data-stellar-ratio="0.7">
-						<div >
-							<div class="item">
-								<h1>Bienvenue</h1>
-								<p>Sur mon portfolio</p>
-                                <div class="extra-space-l"></div>
-								<a class="btn btn-blank" href="#portfolio-section" target="_blank" role="button">Voir les Projets</a>
-							</div>
-						</div>
-					</div>
+                    <div class="caption text-center text-white" data-stellar-ratio="0.7">
+                        <div class="item">
+                            <h1>Killian Filatre</h1>
+                            <p>Bienvenue sur mon portfolio</p>
+                            <div class="extra-space-l"></div>
+                            <a class="btn btn-blank page-scroll" href="#portfolio-section" role="button">
+                                Voir les Projets
+                            </a>
+                        </div>
+                    </div>
+                    <div id="confirmationModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-button" onclick="closeModal()">&times;</span>
+                            <h2>Confirmation</h2>
+                            <p id="modalMessage">Votre message a été envoyé avec succès.</p>
+                        </div>
+                    </div>
 				</div>
 			</section>
 			<section id="about-section" class="page bg-style1">
@@ -162,10 +171,6 @@
                                         <ul>
                                             <li class="active_prot_menu"><a href="#porfolio_menu" data-filter="*">all</a></li>
                                             <li><a href="#porfolio_menu" data-filter=".symfony">Symfony</a></li>
-                                            <!--<li><a href="#porfolio_menu" data-filter=".webDesign" >web design</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".appsDevelopment">apps development</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".GraphicDesign">graphic design</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".responsive">responsive</a></li>-->
                                         </ul>
                                     </div>
                                     <div class="portfolio_content">
@@ -196,73 +201,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--<div class="col-xs-12 col-sm-4 responsive">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/p3.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Hand Shots</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 webDesign websites">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/p4.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Night Abstract</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 appsDevelopment websites">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img//portfolio/p5.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Joy of Independence</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 GraphicDesign">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/p6.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Night Crawlers</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 responsive">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/p7.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Last Motel</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 GraphicDesign">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/p8.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Dirk Road</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 websites">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/p9.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Old is Gold</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
-                            
                             </div>
                         </div>
                     </div>
@@ -292,31 +233,31 @@
 			                        </ul>
                                 </div>
                             </div>
-                        	<div class="col-sm-6">
+                            <div class="col-sm-6">
                                 <div class="contact-form">
-                                	<h4>Écrivez-moi</h4>
-                                    <form role="form">
+                                    <h4>Écrivez-moi</h4>
+                                    <form role="form" action="process_form.php" method="post">
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" placeholder="Votre nom"
-                                                   required>
+                                            <input type="text" class="form-control input-lg" name="nom"
+                                                   placeholder="Votre nom" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control input-lg"
+                                            <input type="email" class="form-control input-lg" name="email"
                                                    placeholder="Votre adresse mail" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" placeholder="Objet"
-                                                   required>
+                                            <input type="text" class="form-control input-lg" name="objet"
+                                                   placeholder="Objet" required>
                                         </div>
                                         <div class="form-group">
-                                            <textarea class="form-control input-lg" rows="5" placeholder="Message"
-                                                      required></textarea>
+                                            <textarea class="form-control input-lg" name="message" rows="5"
+                                                      placeholder="Message" required></textarea>
                                         </div>
                                         <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">
                                             Envoie
                                         </button>
                                     </form>
-                                </div>	
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -345,5 +286,6 @@
 
 		<!-- Theme JS -->
 		<script src="js/theme.js"></script>
+        <script src="js/modal.js"></script>
     </body>
 </html>
