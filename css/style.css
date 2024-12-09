@@ -1133,3 +1133,51 @@ p.subtitle {
 	transform: rotate(-45deg);
 }
 /* ===== End buttons ===== */
+
+
+/* ===== Confirmation mailing ===== */
+.modal {
+	top: 255px !important;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 0;
+}
+
+.modal-content {
+	background-color: white;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 50%;
+	text-align: center;
+	border-radius: 8px;
+	transform: translateY(20px);
+	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	opacity: 0;
+}
+
+.modal.active {
+	display: block;
+	opacity: 1;
+}
+
+.modal-content.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.close-button {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* ===== End Confirmation ===== */
