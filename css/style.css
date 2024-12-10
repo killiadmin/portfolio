@@ -1181,3 +1181,31 @@ p.subtitle {
 }
 
 /* ===== End Confirmation ===== */
+
+.border {
+	border: 1px solid #ccc !important;
+}
+
+.white {
+	color: white !important;
+}
+
+.p-link {
+	padding: 15px 100px 15px 100px;
+	border-radius: 5px !important;
+}
+
+.p-link:hover {
+	background-color: #4E7AC7;
+	transform: scale(1.1);
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.p-link:hover a {
+	text-decoration: none;
+}
+
+.p-link:hover h1 {
+	color: #fff !important;
+}

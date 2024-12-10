@@ -13,13 +13,40 @@ require 'PHPMailer/src/SMTP.php';
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
+if (!hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+    $_SESSION['mail_status'] = 'error';
+    $_SESSION['mail_error'] = 'Invalid CSRF token';
+    header("Location: index.php?status=error");
+    exit();
+}
 
-$nom = htmlspecialchars($_POST['nom']);
-$email = htmlspecialchars($_POST['email']);
-$objet = htmlspecialchars($_POST['objet']);
-$message = htmlspecialchars($_POST['message']);
+$nom = htmlspecialchars($_POST['nom'], ENT_QUOTES, 'UTF-8');
+$email = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
+$objet = htmlspecialchars($_POST['objet'], ENT_QUOTES, 'UTF-8');
+$message = htmlspecialchars($_POST['message'], ENT_QUOTES, 'UTF-8');
+
+$nom = strip_tags($nom);
+$objet = strip_tags($objet);
+$message = strip_tags($message);
+
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $_SESSION['mail_status'] = 'error';
+    $_SESSION['mail_error'] = 'Votre email est invalide';
+    header("Location: index.php?status=error");
+    exit();
+}
+
+if (!preg_match("/^[a-zA-Z-' ]*$/", $nom)) {
+    $_SESSION['mail_status'] = 'error';
+    $_SESSION['mail_error'] = 'Votre nom est invalide';
+    header("Location: index.php?status=error");
+    exit();
+}
 
 $mail = new PHPMailer(true);
+$mail->CharSet = 'UTF-8';
+$mail->Encoding = 'base64';
 
 try {
     $mail->isSMTP();

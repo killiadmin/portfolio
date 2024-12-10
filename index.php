@@ -1,4 +1,12 @@
-<?php session_start(); ?>
+<?php
+
+session_start();
+
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+?>
 
 <!doctype html>
 <html lang="fr">
@@ -142,13 +150,13 @@
           <section id="cta-section">
           	<div class="cta">
             	<div class="container">
-                	<div class="row" style="display: flex; justify-content: center; align-items: center;">
-                        	<h1>Voir mon curriculum vitae</h1>
-                        	<div class="wow bounceInRight" data-wow-delay="0.4s" style="margin-left: 10px;">
-                                <a class="btn btn-default btn-lg" href="#" target="_blank" role="button">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                        	</div>
+                    <div class="row" style="display: flex; justify-content: center; align-items: center;">
+                        <div class="wow bounceInRight border p-link" data-wow-delay="0.4s" style="margin-left: 10px;">
+                            <a href="https://docs.google.com/document/d/19dRTX9NexXQ-bqczfOq90sS11WGjMmVDKcB_JZfqnp4/edit?usp=sharing"
+                               target="_blank">
+                                <h1 style="color: gray;">Voir mon curriculum vitae <i class="fa fa-search"></i></h1>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -227,9 +235,18 @@
                                     <h4>Réseaux</h4>
                                     <ul class="contact-address">
 			                            <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; Normandie, Caen</li>
-			                            <li><i class="fa fa-envelope"></i> killian.filatre@outlook.fr</li>
-                                        <li><i class="fa fa-linkedin"></i> ^/killian-filâtre</li>
-			                            <li><i class="fa fa-github"></i> ^/killiadmin</li>
+                                        <li>
+                                            <i class="fa fa-envelope"></i>
+                                            <a class="white" href="mailto:killian.filatre@outlook.fr">killian.filatre@outlook.fr</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-linkedin"></i>
+                                            <a class="white" href="https://www.linkedin.com/in/killian-fil%C3%A2tre-3104a9206/">^/killian-filâtre</a>
+                                        </li>
+			                            <li>
+                                            <i class="fa fa-github"></i>
+                                            <a class="white" href="https://github.com/killiadmin">^/killiadmin</a>
+                                        </li>
 			                        </ul>
                                 </div>
                             </div>
@@ -237,6 +254,7 @@
                                 <div class="contact-form">
                                     <h4>Écrivez-moi</h4>
                                     <form role="form" action="process_form.php" method="post">
+                                        <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token'], ENT_QUOTES, 'UTF-8'); ?>">
                                         <div class="form-group">
                                             <input type="text" class="form-control input-lg" name="nom"
                                                    placeholder="Votre nom" required>
