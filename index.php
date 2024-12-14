@@ -1,4 +1,9 @@
 <?php
+/*
+ * File : index.php
+ * Author : Killian Filâtre
+ * Description : Page d'accueil du portfolio
+ */
 
 session_start();
 
@@ -7,18 +12,24 @@ if (empty($_SESSION['csrf_token'])) {
 }
 
 ?>
-
 <!doctype html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Portfolio - Killian Filâtre</title>
-		<meta name="description" content="Portfolio - Killian Filâtre">
-		<meta name="keywords" content="Portfolio"/>
-		<meta name="author" content="Killian Filâre">
+		<title>Killian Filâtre - Développeur Web à Caen | Portfolio</title>
+		<meta name="description" content="Portfolio de Killian Filâtre, développeur web basé à Caen. Expertise en développement web, création de sites et applications web sur mesure. Découvrez mes projets et compétences.">
+		<meta name="keywords" content="développeur web, Caen, Killian Filâtre, création site web, développement web, portfolio développeur, Normandie, front-end, back-end"/>
+		<meta name="author" content="Killian Filâtre">
+        
+        <!-- Open Graph / Social Media Meta Tags -->
+        <meta property="og:title" content="Killian Filâtre - Développeur Web à Caen | Portfolio">
+        <meta property="og:description" content="Portfolio de Killian Filâtre, développeur web basé à Caen. Expertise en développement web, création de sites et applications web sur mesure.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://killianfilatre.fr">
+        <meta property="og:image" content="img/og-image.jpg">
 
-		<!-- Mobile Metas -->
+        <!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Google Fonts  -->
