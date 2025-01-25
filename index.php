@@ -211,8 +211,21 @@ if (empty($_SESSION['csrf_token'])) {
                                                 <div class="portfolio_single_content">
                                                     <img src="img/portfolio/projet-02.png" alt="Photographie snowboarder"/>
                                                     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
-                                                        <span>Snowtricks - Symfony 5</span>
+                                                        <span>Snowtricks - Symfony 6</span>
                                                         <a href="https://snowtricks.killianfilatre.fr">
+                                                            <span style="border: 1px solid black; background-color: white; color:black; padding: 10px;">
+                                                                Voir la demo
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 symfony">
+                                                <div class="portfolio_single_content">
+                                                    <img src="img/portfolio/projet-03.png" alt="App Todolist"/>
+                                                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
+                                                        <span>Todolist - Symfony 6</span>
+                                                        <a href="https://todolist.killianfilatre.fr">
                                                             <span style="border: 1px solid black; background-color: white; color:black; padding: 10px;">
                                                                 Voir la demo
                                                             </span>
