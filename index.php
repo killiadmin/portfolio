@@ -1,14 +1,35 @@
+<?php
+/*
+ * File : index.php
+ * Author : Killian Filâtre
+ * Description : Page d'accueil du portfolio
+ */
+
+session_start();
+
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+?>
 <!doctype html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Portfolio - Killian Filâtre</title>
-		<meta name="description" content="Portfolio - Killian Filâtre">
-		<meta name="keywords" content="Portfolio"/>
-		<meta name="author" content="Killian Filâre">
+		<title>Killian Filâtre - Développeur Web à Caen | Portfolio</title>
+		<meta name="description" content="Portfolio de Killian Filâtre, développeur web basé à Caen. Expertise en développement web, création de sites et applications web sur mesure. Découvrez mes projets et compétences.">
+		<meta name="keywords" content="développeur web, Caen, Killian Filâtre, création site web, développement web, portfolio développeur, Normandie, front-end, back-end"/>
+		<meta name="author" content="Killian Filâtre">
+        
+        <!-- Open Graph / Social Media Meta Tags -->
+        <meta property="og:title" content="Killian Filâtre - Développeur Web à Caen | Portfolio">
+        <meta property="og:description" content="Portfolio de Killian Filâtre, développeur web basé à Caen. Expertise en développement web, création de sites et applications web sur mesure.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://killianfilatre.fr">
+        <meta property="og:image" content="img/og-image.jpg">
 
-		<!-- Mobile Metas -->
+        <!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Google Fonts  -->
@@ -47,7 +68,7 @@
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a class="page-scroll" href="#home">Bienvenue</a></li>
+                            <li><a class="page-scroll" href="#home">Home</a></li>
                             <li><a class="page-scroll" href="#about-section">Profil</a></li>
                             <li><a class="page-scroll" href="#portfolio-section">Projets</a></li>
                             <li><a class="page-scroll" href="#contact-section">Contact</a></li>
@@ -59,16 +80,23 @@
 
 			<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/home-picture.jpg);">
 				<div class="container">
-					<div class="caption text-center text-white" data-stellar-ratio="0.7">
-						<div >
-							<div class="item">
-								<h1>Bienvenue</h1>
-								<p>Sur mon portfolio</p>
-                                <div class="extra-space-l"></div>
-								<a class="btn btn-blank" href="#portfolio-section" target="_blank" role="button">Voir les Projets</a>
-							</div>
-						</div>
-					</div>
+                    <div class="caption text-center text-white" data-stellar-ratio="0.7">
+                        <div class="item">
+                            <h1>Killian Filatre</h1>
+                            <p>Bienvenue sur mon portfolio</p>
+                            <div class="extra-space-l"></div>
+                            <a class="btn btn-blank page-scroll" href="#portfolio-section" role="button">
+                                Voir les Projets
+                            </a>
+                        </div>
+                    </div>
+                    <div id="confirmationModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-button" onclick="closeModal()">&times;</span>
+                            <h2>Confirmation</h2>
+                            <p id="modalMessage">Votre message a été envoyé avec succès.</p>
+                        </div>
+                    </div>
 				</div>
 			</section>
 			<section id="about-section" class="page bg-style1">
@@ -133,13 +161,13 @@
           <section id="cta-section">
           	<div class="cta">
             	<div class="container">
-                	<div class="row" style="display: flex; justify-content: center; align-items: center;">
-                        	<h1>Voir mon curriculum vitae</h1>
-                        	<div class="wow bounceInRight" data-wow-delay="0.4s" style="margin-left: 10px;">
-                                <a class="btn btn-default btn-lg" href="#" target="_blank" role="button">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                        	</div>
+                    <div class="row" style="display: flex; justify-content: center; align-items: center;">
+                        <div class="wow bounceInRight border p-link" data-wow-delay="0.4s" style="margin-left: 10px;">
+                            <a href="https://docs.google.com/document/d/19dRTX9NexXQ-bqczfOq90sS11WGjMmVDKcB_JZfqnp4/edit?usp=sharing"
+                               target="_blank">
+                                <h1 style="color: gray;">Voir mon curriculum vitae <i class="fa fa-search"></i></h1>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -162,10 +190,6 @@
                                         <ul>
                                             <li class="active_prot_menu"><a href="#porfolio_menu" data-filter="*">all</a></li>
                                             <li><a href="#porfolio_menu" data-filter=".symfony">Symfony</a></li>
-                                            <!--<li><a href="#porfolio_menu" data-filter=".webDesign" >web design</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".appsDevelopment">apps development</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".GraphicDesign">graphic design</a></li>
-                                            <li><a href="#porfolio_menu" data-filter=".responsive">responsive</a></li>-->
                                         </ul>
                                     </div>
                                     <div class="portfolio_content">
@@ -196,73 +220,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--<div class="col-xs-12 col-sm-4 responsive">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/p3.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Hand Shots</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 webDesign websites">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/p4.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Night Abstract</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 appsDevelopment websites">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img//portfolio/p5.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Joy of Independence</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 GraphicDesign">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/p6.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Night Crawlers</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 responsive">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/p7.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Last Motel</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 GraphicDesign">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/p8.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Dirk Road</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 websites">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/p9.jpg" alt="title"/>
-                                                    <div>
-                                                        <a href="#">Old is Gold</a>
-                                                        <span>Subtitle</span>
-                                                    </div>
-                                                </div>
-                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
-                            
                             </div>
                         </div>
                     </div>
@@ -286,33 +246,47 @@
                                     <h4>Réseaux</h4>
                                     <ul class="contact-address">
 			                            <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; Normandie, Caen</li>
-			                            <li><i class="fa fa-envelope"></i> killian.filatre@outlook.fr</li>
-                                        <li><i class="fa fa-linkedin"></i> ^/killian-filâtre</li>
-			                            <li><i class="fa fa-github"></i> ^/killiadmin</li>
+                                        <li>
+                                            <i class="fa fa-envelope"></i>
+                                            <a class="white" href="mailto:killian.filatre@outlook.fr">killian.filatre@outlook.fr</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-linkedin"></i>
+                                            <a class="white" href="https://www.linkedin.com/in/killian-fil%C3%A2tre-3104a9206/">^/killian-filâtre</a>
+                                        </li>
+			                            <li>
+                                            <i class="fa fa-github"></i>
+                                            <a class="white" href="https://github.com/killiadmin">^/killiadmin</a>
+                                        </li>
 			                        </ul>
                                 </div>
                             </div>
-                        	<div class="col-sm-6">
+                            <div class="col-sm-6">
                                 <div class="contact-form">
-                                	<h4>Écrivez-moi</h4>
+                                    <h4>Écrivez-moi</h4>
                                     <form role="form" action="process_form.php" method="post">
+                                        <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token'], ENT_QUOTES, 'UTF-8'); ?>">
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" name="nom" placeholder="Votre nom" required>
+                                            <input type="text" class="form-control input-lg" name="nom"
+                                                   placeholder="Votre nom" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control input-lg" name="email" placeholder="Votre adresse mail" required>
+                                            <input type="email" class="form-control input-lg" name="email"
+                                                   placeholder="Votre adresse mail" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" name="objet" placeholder="Objet" required>
+                                            <input type="text" class="form-control input-lg" name="objet"
+                                                   placeholder="Objet" required>
                                         </div>
                                         <div class="form-group">
-                                            <textarea class="form-control input-lg" name="message" rows="5" placeholder="Message" required></textarea>
+                                            <textarea class="form-control input-lg" name="message" rows="5"
+                                                      placeholder="Message" required></textarea>
                                         </div>
                                         <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">
                                             Envoie
                                         </button>
                                     </form>
-                                </div>	
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -341,5 +315,6 @@
 
 		<!-- Theme JS -->
 		<script src="js/theme.js"></script>
+        <script src="js/modal.js"></script>
     </body>
 </html>

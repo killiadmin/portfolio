@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /PHPMailer/
+Disallow: /vendor/
+Disallow: /inc/
+
+Sitemap: https://killianfilatre.fr/sitemap.xml
