@@ -14,44 +14,55 @@ if (empty($_SESSION['csrf_token'])) {
 ?>
 <!doctype html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Killian Filâtre - Développeur Web à Caen | Portfolio</title>
-		<meta name="description" content="Portfolio de Killian Filâtre, développeur web basé à Caen. Expertise en développement web, création de sites et applications web sur mesure. Découvrez mes projets et compétences.">
-		<meta name="keywords" content="développeur web, Caen, Killian Filâtre, création site web, développement web, portfolio développeur, Normandie, front-end, back-end"/>
-		<meta name="author" content="Killian Filâtre">
-        
-        <!-- Open Graph / Social Media Meta Tags -->
-        <meta property="og:title" content="Killian Filâtre - Développeur Web à Caen | Portfolio">
-        <meta property="og:description" content="Portfolio de Killian Filâtre, développeur web basé à Caen. Expertise en développement web, création de sites et applications web sur mesure.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://killianfilatre.fr">
-        <meta property="og:image" content="img/og-image.jpg">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Mobile Metas -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Google Fonts  -->
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <!-- SEO -->
+    <title>Killian Filâtre - Développeur Web à Caen | Portfolio</title>
+    <meta name="description" content="Portfolio de Killian Filâtre, développeur web basé à Caen. Expertise en développement web, création de sites et applications web sur mesure. Découvrez mes projets et compétences.">
+    <meta name="author" content="Killian Filâtre">
+    <meta name="google-site-verification" content="d9IIkP0_St1SKfDP1pAupwkIxICr2nsmIrrozGl0ezI" />
+    <link rel="canonical" href="https://killianfilatre.fr/">
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://killianfilatre.fr/">
+    <meta property="og:title" content="Killian Filâtre - Développeur Web à Caen | Portfolio">
+    <meta property="og:description" content="Portfolio de Killian Filâtre, développeur web basé à Caen. Expertise en développement web, création de sites et applications web sur mesure.">
+    <meta property="og:image" content="https://killianfilatre.fr/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Killian Filâtre - Portfolio">
 
-		<!-- Libs and Plugins CSS -->
-		<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="inc/animations/css/animate.min.css">
-		<link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Killian Filâtre - Développeur Web à Caen | Portfolio">
+    <meta name="twitter:description" content="Portfolio de Killian Filâtre, développeur web basé à Caen. Expertise en développement web, création de sites et applications web sur mesure.">
+    <meta name="twitter:image" content="https://killianfilatre.fr/img/og-image.jpg">
 
-		<!-- Theme CSS -->
-        <link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/mobile.css">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
-		<!-- Skin CSS -->
-        <link rel="stylesheet" href="css/theme.css">
-	</head>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <!-- Libs and Plugins CSS -->
+    <link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="inc/animations/css/animate.min.css">
+    <link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="css/theme.css">
+</head>
     <body data-spy="scroll" data-target="#main-navbar">
         <div class="page-loader"></div>
     	<div id="home" class="body">
