@@ -83,11 +83,16 @@ if (empty($_SESSION['csrf_token'])) {
                     <div class="caption text-center text-white" data-stellar-ratio="0.7">
                         <div class="item">
                             <h1>Killian Filatre</h1>
-                            <p>Bienvenue sur mon portfolio</p>
+                            <p>Développeur full-stack</p>
                             <div class="extra-space-l"></div>
-                            <a class="btn btn-blank page-scroll" href="#portfolio-section" role="button">
-                                Voir les Projets
-                            </a>
+                            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-direction: column;">
+                                <a class="btn btn-blank page-scroll" href="#portfolio-section" role="button">
+                                    Voir les Projets
+                                </a>
+                                <a class="btn btn-blank page-scroll" href="#contact-section" role="button">
+                                    Contacte-moi
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div id="confirmationModal" class="modal">
@@ -115,9 +120,10 @@ if (empty($_SESSION['csrf_token'])) {
                                 <span class="rotate-box-icon"><i class="fa fa-user"></i></span>
                                 <div class="rotate-box-info">
                                     <h4>Qui je suis ?</h4>
-                                    <p>Je suis un développeur en alternance, passionné par la technologie. Avec une
-                                        curiosité constante et un fort désir d’apprendre, je m'investis pleinement pour
-                                        développer mes compétences dans le domaine du développement web et logiciel.
+                                    <p>Je suis un développeur Full Stack passionné par la création d'applications web
+                                        modernes et performantes. Fort d'une expertise couvrant aussi bien le front-end
+                                        que le back-end, je conçois des solutions complètes, robustes et orientées
+                                        expérience utilisateur.
                                     </p>
                                 </div>
                             </div>
@@ -125,10 +131,10 @@ if (empty($_SESSION['csrf_token'])) {
                                 <span class="rotate-box-icon"><i class="fa fa-graduation-cap"></i></span>
                                 <div class="rotate-box-info">
                                     <h4>Mon parcours ?</h4>
-                                    <p>Il a été marqué par une transition vers le numérique après plusieurs
-                                        années dans un autre secteur. J'ai décidé de suivre une formation en
-                                        développement informatique en alternance, ce qui me permet d'allier théorie et
-                                        pratique.
+                                    <p>J'ai acquis une solide expérience dans le développement web et
+                                        logiciel, en travaillant sur des projets variés allant de la conception
+                                        d'interfaces utilisateur à l'architecture de systèmes back-end. Chaque projet
+                                        m'a permis de renforcer mon expertise et d'élargir mes compétences techniques.
                                     </p>
                                 </div>
                             </div>
@@ -136,9 +142,10 @@ if (empty($_SESSION['csrf_token'])) {
                                 <span class="rotate-box-icon"><i class="fa fa-heart"></i></span>
                                 <div class="rotate-box-info">
                                     <h4>Ma passion ?</h4>
-                                    <p>La programmation est bien plus qu'une compétence professionnelle pour moi, c'est
-                                        une véritable passion. J'adore résoudre des problèmes complexes, créer des
-                                        applications intuitives et apprendre de nouvelles technologies dans ce domaine en évolution.
+                                    <p>La programmation est au cœur de mon quotidien. J'aime concevoir des architectures
+                                        élégantes, optimiser les performances et relever des défis techniques complexes.
+                                        Toujours en veille technologique, j'explore constamment de nouveaux outils et
+                                        frameworks pour livrer des solutions à la pointe.
                                     </p>
                                 </div>
                             </div>
@@ -146,10 +153,10 @@ if (empty($_SESSION['csrf_token'])) {
                                 <span class="rotate-box-icon"><i class="fa fa-clock-o"></i></span>
                                 <div class="rotate-box-info">
                                     <h4>Depuis quand ?</h4>
-                                    <p>Ma passion pour le code a commencé il y a quelques années lorsque j'ai découvert
-                                        les possibilités infinies qu'offrent les langages de programmation. Depuis, je
-                                        souhaite en faire mon métier et poursuivre une
-                                        carrière enrichissante dans le développement.
+                                    <p>C'est en 2020 que j'ai débuté mon aventure dans le développement web, et depuis,
+                                        je n'ai cessé de progresser et de me perfectionner. Ces années d'expérience
+                                        m'ont permis de bâtir une vision claire du métier et de développer une
+                                        véritable expertise full stack.
                                     </p>
                                 </div>
                             </div>
@@ -157,21 +164,6 @@ if (empty($_SESSION['csrf_token'])) {
                     </div>
                 </div>
             </section>
-
-          <section id="cta-section">
-          	<div class="cta">
-            	<div class="container">
-                    <div class="row" style="display: flex; justify-content: center; align-items: center;">
-                        <div class="wow bounceInRight border p-link" data-wow-delay="0.4s" style="margin-left: 10px;">
-                            <a href="https://docs.google.com/document/d/19dRTX9NexXQ-bqczfOq90sS11WGjMmVDKcB_JZfqnp4/edit?usp=sharing"
-                               target="_blank">
-                                <h1 style="color: gray;">Voir mon curriculum vitae <i class="fa fa-search"></i></h1>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </section>
             <section id="portfolio-section" class="page bg-style1">
             	<div class="container">
                     <div class="row">
@@ -188,7 +180,12 @@ if (empty($_SESSION['csrf_token'])) {
                                 <div class="portfoloi_content_area" >
                                     <div class="portfolio_menu" id="filters">
                                         <ul>
-                                            <li class="active_prot_menu"><a href="#porfolio_menu" data-filter="*">all</a></li>
+                                            <li class="active_prot_menu"><a href="#porfolio_menu" data-filter="*">All</a></li>
+                                            <li><a href="#porfolio_menu" data-filter=".angular">Angular</a></li>
+                                            <li><a href="#porfolio_menu" data-filter=".java">Java</a></li>
+                                            <li><a href="#porfolio_menu" data-filter=".laravel">Laravel</a></li>
+                                            <li><a href="#porfolio_menu" data-filter=".ia">Model IA</a></li>
+                                            <li><a href="#porfolio_menu" data-filter=".vuejs">VueJs</a></li>
                                             <li><a href="#porfolio_menu" data-filter=".symfony">Symfony</a></li>
                                         </ul>
                                     </div>
@@ -198,25 +195,23 @@ if (empty($_SESSION['csrf_token'])) {
                                                 <div class="portfolio_single_content">
                                                     <img src="img/portfolio/projet-01.png" alt="Site ecommerce"/>
                                                     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
-                                                        <span>E-commerce - Symfony 7</span>
-                                                        <a href="https://ecommerce.killianfilatre.fr">
-                                                            <span style="border: 1px solid black; background-color: white; color:black; padding: 10px;">
-                                                                Voir la demo
-                                                            </span>
-                                                        </a>
+                                                        <span style="font-weight: bold; text-decoration: underline">E-commerce</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>Application de A à Z avec gestion de panier, paiement, commandes ... </span>
+                                                        <span>&nbsp;</span>
+                                                        <span>Avec Symfony 7</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 symfony">
                                                 <div class="portfolio_single_content">
                                                     <img src="img/portfolio/projet-02.png" alt="Photographie snowboarder"/>
-                                                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
-                                                        <span>Snowtricks - Symfony 6</span>
-                                                        <a href="https://snowtricks.killianfilatre.fr">
-                                                            <span style="border: 1px solid black; background-color: white; color:black; padding: 10px;">
-                                                                Voir la demo
-                                                            </span>
-                                                        </a>
+                                                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px; padding: 20px; font-weight: bold">
+                                                        <span style="font-weight: bold; text-decoration: underline">Snowtricks</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>Annuaire communautaire interactif <br>de figure de Snowboard</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>Avec Symfony 6</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -224,12 +219,47 @@ if (empty($_SESSION['csrf_token'])) {
                                                 <div class="portfolio_single_content">
                                                     <img src="img/portfolio/projet-03.png" alt="App Todolist"/>
                                                     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
-                                                        <span>Todolist - Symfony 6</span>
-                                                        <a href="https://todolist.killianfilatre.fr">
-                                                            <span style="border: 1px solid black; background-color: white; color:black; padding: 10px;">
-                                                                Voir la demo
-                                                            </span>
-                                                        </a>
+                                                        <span style="font-weight: bold; text-decoration: underline">Todolist</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>Application todolist <br>interne pour une équipe</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>Avec Symfony 6</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 laravel vuejs ia">
+                                                <div class="portfolio_single_content">
+                                                    <img src="img/portfolio/projet-04.png" alt="App Material generator"/>
+                                                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
+                                                        <span style="font-weight: bold; text-decoration: underline">Material generator</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>Générateur de liste de matériel nécessaire <br>pour la réalisation de la vidéo youtube de bricolage partagé par un url</span>
+                                                        <span>&nbsp;</span>
+                                                        <span style="font-weight: bold">Avec Laravel 12, Vuejs 3 et model IA</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 java angular">
+                                                <div class="portfolio_single_content">
+                                                    <img src="img/portfolio/projet-05.png" alt="App Mdd"/>
+                                                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
+                                                        <span style="font-weight: bold; text-decoration: underline">Monde de dev</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>Dashboard de veille technologique <br>interne pour une entreprise et pour le partage de connaissance</span>
+                                                        <span>&nbsp;</span>
+                                                        <span style="font-weight: bold">Avec Java 17, Angular 14</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 java angular">
+                                                <div class="portfolio_single_content">
+                                                    <img src="img/portfolio/projet-06.png" alt="App Quizz gageur"/>
+                                                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
+                                                        <span style="font-weight: bold; text-decoration: underline">Quizz gageure</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>Générateur de vidéo de quizz <br> avec choix du thème <br>avec un format QCM (4 choix de réponses)</span>
+                                                        <span>&nbsp;</span>
+                                                        <span style="font-weight: bold">Avec Java 17, Angular 21</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -308,7 +338,7 @@ if (empty($_SESSION['csrf_token'])) {
             <footer class="text-off-white">
                 <div class="footer">
                     <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
-                        <p class="copyright">Copyright &copy; 2024</p>
+                        <p class="copyright">Copyright &copy; Killian Filâtre - 2026</p>
                     </div>
                 </div>
             </footer>
