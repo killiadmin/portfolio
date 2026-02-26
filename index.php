@@ -19,12 +19,39 @@ if (empty($_SESSION['csrf_token'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
     <!-- SEO -->
     <title>Killian Filâtre - Développeur Web à Caen | Portfolio</title>
     <meta name="description" content="Portfolio de Killian Filâtre, développeur web basé à Caen. Expertise en développement web, création de sites et applications web sur mesure. Découvrez mes projets et compétences.">
     <meta name="author" content="Killian Filâtre">
     <meta name="google-site-verification" content="d9IIkP0_St1SKfDP1pAupwkIxICr2nsmIrrozGl0ezI" />
     <link rel="canonical" href="https://killianfilatre.fr/">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Killian Filâtre",
+            "jobTitle": "Développeur Web Full Stack",
+            "url": "https://killianfilatre.fr",
+            "email": "killian.filatre@outlook.fr",
+            "image": "https://killianfilatre.fr/img/og-image.jpg",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Caen",
+                "addressRegion": "Normandie",
+                "addressCountry": "FR"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/killian-filâtre-3104a9206/",
+                "https://github.com/killiadmin"
+            ]
+        }
+    </script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -42,10 +69,6 @@ if (empty($_SESSION['csrf_token'])) {
     <meta name="twitter:title" content="Killian Filâtre - Développeur Web à Caen | Portfolio">
     <meta name="twitter:description" content="Portfolio de Killian Filâtre, développeur web basé à Caen. Expertise en développement web, création de sites et applications web sur mesure.">
     <meta name="twitter:image" content="https://killianfilatre.fr/img/og-image.jpg">
-
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/favicon.png">
@@ -94,7 +117,7 @@ if (empty($_SESSION['csrf_token'])) {
                     <div class="caption text-center text-white" data-stellar-ratio="0.7">
                         <div class="item">
                             <h1>Killian Filatre</h1>
-                            <p>Développeur full-stack</p>
+                            <h2>Développeur Full Stack basé à Caen, Normandie</h2>
                             <div class="extra-space-l"></div>
                             <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-direction: column;">
                                 <a class="btn btn-blank page-scroll" href="#portfolio-section" role="button">
@@ -131,7 +154,7 @@ if (empty($_SESSION['csrf_token'])) {
                                 <span class="rotate-box-icon"><i class="fa fa-user"></i></span>
                                 <div class="rotate-box-info">
                                     <h4>Qui je suis ?</h4>
-                                    <p>Je suis un développeur Full Stack passionné par la création d'applications web
+                                    <p>Je suis un développeur Full Stack basé à Caen, passionné par la création d'applications web
                                         modernes et performantes. Fort d'une expertise couvrant aussi bien le front-end
                                         que le back-end, je conçois des solutions complètes, robustes et orientées
                                         expérience utilisateur.
@@ -204,7 +227,7 @@ if (empty($_SESSION['csrf_token'])) {
                                         <div class="row" id="portfolio">
                                             <div class="col-xs-12 col-sm-4 symfony">
                                                 <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/projet-01.png" alt="Site ecommerce"/>
+                                                    <img src="img/portfolio/projet-01.png" alt="Projet e-commerce développé avec Symfony 7 par Killian Filâtre, développeur web à Caen"/>
                                                     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
                                                         <span style="font-weight: bold; text-decoration: underline">E-commerce</span>
                                                         <span>&nbsp;</span>
@@ -216,7 +239,8 @@ if (empty($_SESSION['csrf_token'])) {
                                             </div>
                                             <div class="col-xs-12 col-sm-4 symfony">
                                                 <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/projet-02.png" alt="Photographie snowboarder"/>
+                                                    <img src="img/portfolio/projet-02.png"
+                                                         alt="Projet annuaire communautaire interactif de figure de Snowboar développé avec Symfony 6 par Killian Filâtre, développeur web à Caen"/>
                                                     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px; padding: 20px; font-weight: bold">
                                                         <span style="font-weight: bold; text-decoration: underline">Snowtricks</span>
                                                         <span>&nbsp;</span>
@@ -228,7 +252,7 @@ if (empty($_SESSION['csrf_token'])) {
                                             </div>
                                             <div class="col-xs-12 col-sm-4 symfony">
                                                 <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/projet-03.png" alt="App Todolist"/>
+                                                    <img src="img/portfolio/projet-03.png" alt="Projet de liste de tâche développé avec Symfony 6 par Killian Filâtre, développeur web à Caen"/>
                                                     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
                                                         <span style="font-weight: bold; text-decoration: underline">Todolist</span>
                                                         <span>&nbsp;</span>
@@ -240,7 +264,8 @@ if (empty($_SESSION['csrf_token'])) {
                                             </div>
                                             <div class="col-xs-12 col-sm-4 laravel vuejs ia">
                                                 <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/projet-04.png" alt="App Material generator"/>
+                                                    <img src="img/portfolio/projet-04.png"
+                                                         alt="Projet de générateur de liste d'outils via un url youtube avec Laravel 12 et vuejs3 par Killian Filâtre, développeur web à Caen"/>
                                                     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
                                                         <span style="font-weight: bold; text-decoration: underline">Material generator</span>
                                                         <span>&nbsp;</span>
@@ -252,7 +277,8 @@ if (empty($_SESSION['csrf_token'])) {
                                             </div>
                                             <div class="col-xs-12 col-sm-4 java angular">
                                                 <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/projet-05.png" alt="App Mdd"/>
+                                                    <img src="img/portfolio/projet-05.png"
+                                                         alt="Projet d'un dashboard de veille technologique avec Java 17 et Angular 14 par Killian Filâtre, développeur web à Caen"/>
                                                     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
                                                         <span style="font-weight: bold; text-decoration: underline">Monde de dev</span>
                                                         <span>&nbsp;</span>
@@ -264,7 +290,8 @@ if (empty($_SESSION['csrf_token'])) {
                                             </div>
                                             <div class="col-xs-12 col-sm-4 java angular">
                                                 <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/projet-06.png" alt="App Quizz gageur"/>
+                                                    <img src="img/portfolio/projet-06.png"
+                                                         alt="Projet de générateur de quizz avec Java 17 et Angular 21 par Killian Filâtre, développeur web à Caen"/>
                                                     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
                                                         <span style="font-weight: bold; text-decoration: underline">Quizz gageure</span>
                                                         <span>&nbsp;</span>
@@ -306,11 +333,11 @@ if (empty($_SESSION['csrf_token'])) {
                                         </li>
                                         <li>
                                             <i class="fa fa-linkedin"></i>
-                                            <a class="white" href="https://www.linkedin.com/in/killian-fil%C3%A2tre-3104a9206/">^/killian-filâtre</a>
+                                            <a href="https://www.linkedin.com/in/killian-filâtre-3104a9206/" rel="noopener">LinkedIn</a>
                                         </li>
 			                            <li>
                                             <i class="fa fa-github"></i>
-                                            <a class="white" href="https://github.com/killiadmin">^/killiadmin</a>
+                                            <a class="white" href="https://github.com/killiadmin">Github</a>
                                         </li>
 			                        </ul>
                                 </div>
