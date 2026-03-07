@@ -395,7 +395,7 @@ if (empty($_SESSION['csrf_token'])) {
 		<script src="inc/smoothscroll.js"></script>
 
 		<!-- Theme JS -->
-		<script src="js/theme.js"></script>
-        <script src="js/modal.js"></script>
+		<script src="js_min/theme.min.js"></script>
+        <script src="js_min/modal.min.js"></script>
     </body>
 </html>
