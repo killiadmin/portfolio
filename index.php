@@ -22,7 +22,8 @@ if (empty($_SESSION['csrf_token'])) {
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lato:wght@300;400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lato:wght@300;400&display=swap">
 
     <!-- SEO -->
     <title>Killian Filâtre - Développeur Web à Caen | Portfolio</title>
@@ -47,7 +48,7 @@ if (empty($_SESSION['csrf_token'])) {
                 "addressCountry": "FR"
             },
             "sameAs": [
-                "https://www.linkedin.com/in/killian-filâtre-3104a9206/",
+                "https://www.linkedin.com/in/killian-fil%C3%A2tre-3104a9206/",
                 "https://github.com/killiadmin"
             ]
         }
@@ -85,6 +86,7 @@ if (empty($_SESSION['csrf_token'])) {
 
     <!-- Skin CSS -->
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/project-modal.css">
 </head>
     <body data-spy="scroll" data-target="#main-navbar">
         <div class="page-loader"></div>
@@ -116,7 +118,7 @@ if (empty($_SESSION['csrf_token'])) {
 				<div class="container">
                     <div class="caption text-center text-white" data-stellar-ratio="0.7">
                         <div class="item">
-                            <h1>Killian Filatre</h1>
+                            <h1>Killian Filâtre</h1>
                             <h2>Développeur Full Stack basé à Caen, Normandie</h2>
                             <div class="extra-space-l"></div>
                             <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-direction: column;">
@@ -226,80 +228,94 @@ if (empty($_SESSION['csrf_token'])) {
                                     <div class="portfolio_content">
                                         <div class="row" id="portfolio">
                                             <div class="col-xs-12 col-sm-4 symfony">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/projet-01.png" alt="Projet e-commerce développé avec Symfony 7 par Killian Filâtre, développeur web à Caen"/>
-                                                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
-                                                        <span style="font-weight: bold; text-decoration: underline">E-commerce</span>
-                                                        <span>&nbsp;</span>
-                                                        <span>Application de A à Z avec gestion de panier, paiement, commandes ... </span>
-                                                        <span>&nbsp;</span>
-                                                        <span>Avec Symfony 7</span>
+                                                <a href="project.php?id=ecommerce" style="text-decoration: none; color: inherit;">
+                                                    <div class="portfolio_single_content">
+                                                        <img src="img/portfolio/projet-01.png" width="360px" height="360px"
+                                                             alt="Projet e-commerce développé avec Symfony 7 par Killian Filâtre, développeur web à Caen"/>
+                                                        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
+                                                            <span style="font-weight: bold; text-decoration: underline">E-commerce</span>
+                                                            <span>&nbsp;</span>
+                                                            <span>Application de A à Z <br>avec gestion de panier,<br> paiement et commandes </span>
+                                                            <span>&nbsp;</span>
+                                                            <span>Symfony 7</span>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 symfony">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/projet-02.png"
-                                                         alt="Projet annuaire communautaire interactif de figure de Snowboar développé avec Symfony 6 par Killian Filâtre, développeur web à Caen"/>
-                                                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px; padding: 20px; font-weight: bold">
-                                                        <span style="font-weight: bold; text-decoration: underline">Snowtricks</span>
-                                                        <span>&nbsp;</span>
-                                                        <span>Annuaire communautaire interactif <br>de figure de Snowboard</span>
-                                                        <span>&nbsp;</span>
-                                                        <span>Avec Symfony 6</span>
+                                                <a href="project.php?id=snowtricks" style="text-decoration: none; color: inherit;">
+                                                    <div class="portfolio_single_content">
+                                                        <img src="img/portfolio/projet-02.png" width="360px" height="360px"
+                                                             alt="Projet annuaire communautaire interactif de figure de Snowboar développé avec Symfony 6 par Killian Filâtre, développeur web à Caen"/>
+                                                        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px; padding: 20px; font-weight: bold">
+                                                            <span style="font-weight: bold; text-decoration: underline">Snowtricks</span>
+                                                            <span>&nbsp;</span>
+                                                            <span>Annuaire communautaire interactif <br>de figure de Snowboard</span>
+                                                            <span>&nbsp;</span>
+                                                            <span>Avec Symfony 6</span>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 symfony">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/projet-03.png" alt="Projet de liste de tâche développé avec Symfony 6 par Killian Filâtre, développeur web à Caen"/>
-                                                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
-                                                        <span style="font-weight: bold; text-decoration: underline">Todolist</span>
-                                                        <span>&nbsp;</span>
-                                                        <span>Application todolist <br>interne pour une équipe</span>
-                                                        <span>&nbsp;</span>
-                                                        <span>Avec Symfony 6</span>
+                                                <a href="project.php?id=todolist" style="text-decoration: none; color: inherit;">
+                                                    <div class="portfolio_single_content">
+                                                        <img src="img/portfolio/projet-03.png" width="360px" height="360px"
+                                                             alt="Projet de liste de tâche développé avec Symfony 6 par Killian Filâtre, développeur web à Caen"/>
+                                                        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
+                                                            <span style="font-weight: bold; text-decoration: underline">Todolist</span>
+                                                            <span>&nbsp;</span>
+                                                            <span>Application todolist <br>interne pour une équipe</span>
+                                                            <span>&nbsp;</span>
+                                                            <span>Avec Symfony 6</span>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 laravel vuejs ia">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/projet-04.png"
-                                                         alt="Projet de générateur de liste d'outils via un url youtube avec Laravel 12 et vuejs3 par Killian Filâtre, développeur web à Caen"/>
-                                                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
-                                                        <span style="font-weight: bold; text-decoration: underline">Material generator</span>
-                                                        <span>&nbsp;</span>
-                                                        <span>Générateur de liste de matériel nécessaire <br>pour la réalisation de la vidéo youtube de bricolage partagé par un url</span>
-                                                        <span>&nbsp;</span>
-                                                        <span style="font-weight: bold">Avec Laravel 12, Vuejs 3 et model IA</span>
+                                                <a href="project.php?id=material-generator" style="text-decoration: none; color: inherit;">
+                                                    <div class="portfolio_single_content">
+                                                        <img src="img/portfolio/projet-04.png" width="360px" height="360px"
+                                                             alt="Projet de générateur de liste d'outils via un url youtube avec Laravel 12 et vuejs3 par Killian Filâtre, développeur web à Caen"/>
+                                                        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
+                                                            <span style="font-weight: bold; text-decoration: underline">Material generator</span>
+                                                            <span>&nbsp;</span>
+                                                            <span>Générateur de liste de matériel nécessaire <br>pour la réalisation de la vidéo youtube de bricolage partagé par un url</span>
+                                                            <span>&nbsp;</span>
+                                                            <span style="font-weight: bold">Avec Laravel 12, Vuejs 3 et model IA</span>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 java angular">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/projet-05.png"
-                                                         alt="Projet d'un dashboard de veille technologique avec Java 17 et Angular 14 par Killian Filâtre, développeur web à Caen"/>
-                                                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
-                                                        <span style="font-weight: bold; text-decoration: underline">Monde de dev</span>
-                                                        <span>&nbsp;</span>
-                                                        <span>Dashboard de veille technologique <br>interne pour une entreprise et pour le partage de connaissance</span>
-                                                        <span>&nbsp;</span>
-                                                        <span style="font-weight: bold">Avec Java 17, Angular 14</span>
+                                                <a href="project.php?id=monde-de-dev" style="text-decoration: none; color: inherit;">
+                                                    <div class="portfolio_single_content">
+                                                        <img src="img/portfolio/projet-05.png" width="360px" height="360px"
+                                                             alt="Projet d'un dashboard de veille technologique avec Java 17 et Angular 14 par Killian Filâtre, développeur web à Caen"/>
+                                                        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
+                                                            <span style="font-weight: bold; text-decoration: underline">Monde de dev</span>
+                                                            <span>&nbsp;</span>
+                                                            <span>Dashboard de veille technologique <br>interne pour une entreprise et pour le partage de connaissance</span>
+                                                            <span>&nbsp;</span>
+                                                            <span style="font-weight: bold">Avec Java 17, Angular 14</span>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 java angular">
-                                                <div class="portfolio_single_content">
-                                                    <img src="img/portfolio/projet-06.png"
-                                                         alt="Projet de générateur de quizz avec Java 17 et Angular 21 par Killian Filâtre, développeur web à Caen"/>
-                                                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
-                                                        <span style="font-weight: bold; text-decoration: underline">Quizz gageure</span>
-                                                        <span>&nbsp;</span>
-                                                        <span>Générateur de vidéo de quizz <br> avec choix du thème <br>avec un format QCM (4 choix de réponses)</span>
-                                                        <span>&nbsp;</span>
-                                                        <span style="font-weight: bold">Avec Java 17, Angular 21</span>
+                                                <a href="project.php?id=quizz-gageure" style="text-decoration: none; color: inherit;">
+                                                    <div class="portfolio_single_content">
+                                                        <img src="img/portfolio/projet-06.png" width="360px" height="360px"
+                                                             alt="Projet de générateur de quizz avec Java 17 et Angular 21 par Killian Filâtre, développeur web à Caen"/>
+                                                        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
+                                                            <span style="font-weight: bold; text-decoration: underline">Quizz gageure</span>
+                                                            <span>&nbsp;</span>
+                                                            <span>Générateur de vidéo de quizz <br> avec choix du thème <br>avec un format QCM (4 choix de réponses)</span>
+                                                            <span>&nbsp;</span>
+                                                            <span style="font-weight: bold">Avec Java 17, Angular 21</span>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -333,11 +349,11 @@ if (empty($_SESSION['csrf_token'])) {
                                         </li>
                                         <li>
                                             <i class="fa fa-linkedin"></i>
-                                            <a href="https://www.linkedin.com/in/killian-filâtre-3104a9206/" rel="noopener">LinkedIn</a>
+                                            <a href="https://www.linkedin.com/in/killian-fil%C3%A2tre-3104a9206/" rel="noopener" noreferrer>LinkedIn</a>
                                         </li>
 			                            <li>
                                             <i class="fa fa-github"></i>
-                                            <a class="white" href="https://github.com/killiadmin">Github</a>
+                                            <a class="white" href="https://github.com/killiadmin" rel="noopener" noreferrer>Github</a>
                                         </li>
 			                        </ul>
                                 </div>
@@ -382,6 +398,62 @@ if (empty($_SESSION['csrf_token'])) {
             </footer>
             <a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a>
         </div>
+
+        <!-- Project Modal -->
+        <div id="projectModalOverlay" class="project-modal-overlay">
+            <div class="project-modal">
+                <button id="modalCloseBtn" class="modal-close">
+                    <i class="fa fa-times"></i>
+                </button>
+
+                <div class="modal-header">
+                    <h2 id="modalTitle"></h2>
+                    <h3 id="modalSubtitle"></h3>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Carrousel -->
+                    <div class="modal-section">
+                        <div id="modalCarousel" class="modal-carousel">
+                            <div id="modalCarouselContainer" class="modal-carousel-container">
+                                <!-- Les slides seront insérées dynamiquement -->
+                            </div>
+                            <button class="modal-carousel-btn prev" onclick="changeSlide(-1)">
+                                <i class="fa fa-chevron-left"></i>
+                            </button>
+                            <button class="modal-carousel-btn next" onclick="changeSlide(1)">
+                                <i class="fa fa-chevron-right"></i>
+                            </button>
+                            <div id="modalCarouselIndicators" class="modal-carousel-indicators"></div>
+                        </div>
+                    </div>
+
+                    <!-- Technologies -->
+                    <div class="modal-section">
+                        <h4>Technologies utilisées</h4>
+                        <div id="modalTechnologies" class="tech-tags"></div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="modal-section">
+                        <h4>Description du projet</h4>
+                        <p id="modalDescription" class="modal-description"></p>
+                    </div>
+
+                    <!-- Fonctionnalités -->
+                    <div class="modal-section">
+                        <h4>Fonctionnalités principales</h4>
+                        <ul id="modalFeatures" class="features-list"></ul>
+                    </div>
+
+                    <!-- Liens -->
+                    <div class="modal-section">
+                        <div id="modalLinks" class="project-links"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Plugins JS -->
 		<script src="inc/jquery/jquery-1.11.1.min.js"></script>
 		<script src="inc/bootstrap/js/bootstrap.min.js"></script>
@@ -397,5 +469,6 @@ if (empty($_SESSION['csrf_token'])) {
 		<!-- Theme JS -->
 		<script src="js_min/theme.min.js"></script>
         <script src="js_min/modal.min.js"></script>
+        <script src="js/project-modal.js"></script>
     </body>
 </html>

@@ -1,0 +1,134 @@
+{
+  "ecommerce": {
+    "title": "E-commerce",
+    "subtitle": "Plateforme de vente en ligne complète",
+    "technologies": ["Symfony 7", "PHP 8.2", "MySQL", "Twig", "Bootstrap"],
+    "description": "Application e-commerce développée de A à Z avec Symfony 7. Cette plateforme complète intègre un système de gestion de panier sophistiqué, un processus de paiement sécurisé via Stripe, une gestion avancée des commandes et un back-office d'administration. L'architecture suit les principes SOLID et utilise Doctrine ORM pour la persistance des données.",
+    "images": [
+      "img/portfolio/projet-01.png",
+      "img/portfolio/projet-01.png",
+      "img/portfolio/projet-01.png"
+    ],
+    "features": [
+      "Système de panier dynamique avec gestion des quantités",
+      "Paiement sécurisé avec Stripe API",
+      "Gestion complète des commandes (statuts, historique)",
+      "Interface d'administration avec tableaux de bord",
+      "Système d'authentification sécurisé",
+      "Gestion des produits (CRUD complet)",
+      "Système de filtres et recherche avancée"
+    ],
+    "github": "",
+    "demo": ""
+  },
+  "snowtricks": {
+    "title": "Snowtricks",
+    "subtitle": "Annuaire communautaire de figures de Snowboard",
+    "technologies": ["Symfony 6", "PHP 8.1", "MySQL", "JavaScript", "Bootstrap"],
+    "description": "Plateforme collaborative permettant aux passionnés de snowboard de partager et découvrir des figures. L'application offre un système de gestion de médias (images et vidéos), un espace de discussion pour chaque figure, et un système d'authentification complet avec récupération de mot de passe.",
+    "images": [
+      "img/portfolio/projet-02.png",
+      "img/portfolio/projet-02.png",
+      "img/portfolio/projet-02.png"
+    ],
+    "features": [
+      "CRUD complet des figures de snowboard",
+      "Upload et gestion de médias multiples",
+      "Système de commentaires par figure",
+      "Authentification avec confirmation par email",
+      "Récupération de mot de passe sécurisée",
+      "Interface responsive et intuitive",
+      "Pagination Ajax pour optimiser les performances"
+    ],
+    "github": "",
+    "demo": ""
+  },
+  "todolist": {
+    "title": "TodoList",
+    "subtitle": "Application de gestion de tâches pour équipes",
+    "technologies": ["Symfony 6", "PHP 8.1", "MySQL", "API REST"],
+    "description": "Application de gestion de tâches interne conçue pour faciliter la collaboration au sein d'une équipe. Elle permet de créer, assigner et suivre des tâches avec différents niveaux de priorité. L'architecture respecte les bonnes pratiques de développement avec une couverture de tests complète.",
+    "images": [
+      "img/portfolio/projet-03.png",
+      "img/portfolio/projet-03.png",
+      "img/portfolio/projet-03.png"
+    ],
+    "features": [
+      "Création et gestion de tâches",
+      "Système de priorités et statuts",
+      "Attribution de tâches aux utilisateurs",
+      "Tests unitaires et fonctionnels",
+      "API REST pour intégrations futures",
+      "Gestion des permissions utilisateurs",
+      "Interface d'administration complète"
+    ],
+    "github": "",
+    "demo": ""
+  },
+  "material-generator": {
+    "title": "Material Generator",
+    "subtitle": "Générateur intelligent de liste de matériel",
+    "technologies": ["Laravel 12", "Vue.js 3", "IA (OpenAI)", "MySQL", "Tailwind CSS"],
+    "description": "Application innovante utilisant l'intelligence artificielle pour analyser des vidéos YouTube de bricolage et générer automatiquement une liste complète du matériel nécessaire. L'IA analyse le contenu vidéo et les descriptions pour identifier tous les outils et matériaux requis pour réaliser le projet présenté.",
+    "images": [
+      "img/portfolio/projet-04.png",
+      "img/portfolio/projet-04.png",
+      "img/portfolio/projet-04.png"
+    ],
+    "features": [
+      "Analyse automatique via URL YouTube",
+      "Intégration de l'API OpenAI pour l'analyse",
+      "Interface Vue.js 3 réactive et moderne",
+      "Export de la liste de matériel en PDF",
+      "Sauvegarde des projets analysés",
+      "Estimation des coûts du matériel",
+      "Suggestions d'alternatives pour le matériel"
+    ],
+    "github": "",
+    "demo": ""
+  },
+  "monde-de-dev": {
+    "title": "Monde de Dev",
+    "subtitle": "Dashboard de veille technologique",
+    "technologies": ["Java 17", "Angular 14", "Spring Boot", "PostgreSQL", "TypeScript"],
+    "description": "Plateforme de veille technologique interne permettant aux équipes de développement de partager et suivre les dernières actualités tech. L'application agrège du contenu provenant de diverses sources et offre un système de recommandations personnalisées basé sur les centres d'intérêt de chaque utilisateur.",
+    "images": [
+      "img/portfolio/projet-05.png",
+      "img/portfolio/projet-05.png",
+      "img/portfolio/projet-05.png"
+    ],
+    "features": [
+      "Agrégation de flux RSS technologiques",
+      "Système de recommandations personnalisées",
+      "Partage et bookmarking d'articles",
+      "Espace de discussion par article",
+      "Tableaux de bord personnalisables",
+      "API REST complète avec Spring Boot",
+      "Architecture microservices"
+    ],
+    "github": "",
+    "demo": ""
+  },
+  "quizz-gageure": {
+    "title": "Quizz Gageure",
+    "subtitle": "Générateur de vidéos de quizz",
+    "technologies": ["Java 17", "Angular 21", "Spring Boot", "FFmpeg", "PostgreSQL"],
+    "description": "Application de génération automatique de vidéos de quizz au format QCM. L'utilisateur choisit un thème, et l'application génère automatiquement les questions, les réponses, puis compile le tout en une vidéo prête à être partagée sur les réseaux sociaux. Le rendu vidéo est géré via FFmpeg pour une qualité optimale.",
+    "images": [
+      "img/portfolio/projet-06.png",
+      "img/portfolio/projet-06.png",
+      "img/portfolio/projet-06.png"
+    ],
+    "features": [
+      "Génération automatique de questions par thème",
+      "Création de vidéos avec FFmpeg",
+      "Choix de templates visuels personnalisables",
+      "Export en différentes résolutions",
+      "Bibliothèque de thèmes prédéfinis",
+      "Interface Angular moderne et réactive",
+      "Gestion des projets et historique"
+    ],
+    "github": "",
+    "demo": ""
+  }
+}
