@@ -81,7 +81,7 @@
 
 /* Header de la modale */
 .modal-header {
-    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    background: linear-gradient(135deg, #7FB2F0 0%, #4E7AC7 100%);
     color: #fff;
     padding: 40px 30px;
     border-radius: 12px 12px 0 0;
@@ -132,7 +132,7 @@
     left: 0;
     width: 50px;
     height: 3px;
-    background: linear-gradient(to right, #00d4ff, #0099cc);
+    background: linear-gradient(to right, #7FB2F0, #4E7AC7);
 }
 
 /* Carrousel dans la modale */
@@ -190,7 +190,7 @@
 
 .modal-carousel-btn:hover {
     background: #fff;
-    color: #00d4ff;
+    color: #4E7AC7;
 }
 
 .modal-carousel-btn.prev {
@@ -236,18 +236,18 @@
 .tech-tag {
     display: inline-block;
     padding: 10px 20px;
-    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    background: linear-gradient(135deg, #7FB2F0 0%, #4E7AC7 100%);
     color: #fff;
     border-radius: 25px;
     font-size: 14px;
     font-weight: 500;
-    box-shadow: 0 3px 10px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 3px 10px rgba(78, 122, 199, 0.3);
     transition: all 0.3s ease;
 }
 
 .tech-tag:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+    box-shadow: 0 5px 15px rgba(78, 122, 199, 0.4);
 }
 
 /* Description */
@@ -279,7 +279,7 @@
 }
 
 .features-list li i {
-    color: #00d4ff;
+    color: #4E7AC7;
     margin-right: 12px;
     margin-top: 2px;
     font-size: 16px;
@@ -309,23 +309,23 @@
 }
 
 .project-link-btn.primary {
-    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    background: linear-gradient(135deg, #7FB2F0 0%, #4E7AC7 100%);
     color: #fff;
 }
 
 .project-link-btn.primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+    box-shadow: 0 5px 15px rgba(78, 122, 199, 0.4);
 }
 
 .project-link-btn.secondary {
     background: transparent;
-    border: 2px solid #00d4ff;
-    color: #00d4ff;
+    border: 2px solid #4E7AC7;
+    color: #4E7AC7;
 }
 
 .project-link-btn.secondary:hover {
-    background: #00d4ff;
+    background: #4E7AC7;
     color: #fff;
     transform: translateY(-2px);
 }

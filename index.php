@@ -86,6 +86,7 @@ if (empty($_SESSION['csrf_token'])) {
 
     <!-- Skin CSS -->
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="css/project-modal.css">
 </head>
     <body data-spy="scroll" data-target="#main-navbar">
@@ -106,6 +107,7 @@ if (empty($_SESSION['csrf_token'])) {
                         <ul class="nav navbar-nav navbar-right">
                             <li><a class="page-scroll" href="#home">Home</a></li>
                             <li><a class="page-scroll" href="#about-section">Profil</a></li>
+                            <li><a class="page-scroll" href="#services-section">Services</a></li>
                             <li><a class="page-scroll" href="#portfolio-section">Projets</a></li>
                             <li><a class="page-scroll" href="#contact-section">Contact</a></li>
                         </ul>
@@ -194,6 +196,87 @@ if (empty($_SESSION['csrf_token'])) {
                                         m'ont permis de bâtir une vision claire du métier et de développer une
                                         véritable expertise full stack.
                                     </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="services-section" class="page">
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                            <h2>Services</h2>
+                            <div class="devider"></div>
+                            <p class="subtitle">Des solutions web complètes adaptées à vos besoins</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="service-icon">
+                                    <i class="fa fa-code"></i>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Création de sites web sur mesure</h3>
+                                    <p>Développement d'applications web modernes et performantes, adaptées à vos besoins spécifiques. De la landing page au site e-commerce complet, avec des technologies comme Symfony, Laravel, Angular et Vue.js.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="service-icon">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Optimisation SEO</h3>
+                                    <p>Amélioration de votre visibilité sur les moteurs de recherche grâce à des techniques SEO avancées. Optimisation technique, sémantique et structurelle pour maximiser votre référencement naturel.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="service-icon">
+                                    <i class="fa fa-paint-brush"></i>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Design UI/UX</h3>
+                                    <p>Conception d'interfaces utilisateur intuitives et attrayantes. Design responsive adapté à tous les supports (mobile, tablette, desktop) pour offrir une expérience utilisateur optimale.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="service-icon">
+                                    <i class="fa fa-wrench"></i>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Maintenance & Support</h3>
+                                    <p>Maintenance préventive et corrective de vos applications web. Mises à jour régulières, correction de bugs, améliorations continues et support technique pour assurer la pérennité de vos projets.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="service-icon">
+                                    <i class="fa fa-server"></i>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Infrastructure & DevOps</h3>
+                                    <p>Mise en place d'infrastructures robustes et scalables. Configuration de serveurs, déploiement continu (CI/CD), conteneurisation avec Docker, et optimisation des performances.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.7s">
+                                <div class="service-icon">
+                                    <i class="fa fa-cloud"></i>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Hébergement & Déploiement</h3>
+                                    <p>Solutions d'hébergement adaptées à vos besoins. Configuration d'environnements de production sécurisés, gestion des noms de domaine, certificats SSL et sauvegardes automatiques.</p>
                                 </div>
                             </div>
                         </div>
