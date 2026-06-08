@@ -116,7 +116,7 @@ if (empty($_SESSION['csrf_token'])) {
                 </nav>
             </header>
 
-			<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/home-picture.jpg);">
+			<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/home-picture.webp);">
 				<div class="container">
                     <div class="caption text-center text-white" data-stellar-ratio="0.7">
                         <div class="item">
@@ -408,7 +408,7 @@ if (empty($_SESSION['csrf_token'])) {
                     </div>
                 </div>
             </section>
-			<section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/testimonial-bg.jpg);">
+			<section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/home-footer.webp);">
             <div class="cover"></div>
                 <div class="page-header-wrapper">
                     <div class="container">
@@ -433,10 +433,6 @@ if (empty($_SESSION['csrf_token'])) {
                                         <li>
                                             <i class="fa fa-linkedin"></i>
                                             <a href="https://www.linkedin.com/in/killian-fil%C3%A2tre-3104a9206/" rel="noopener" noreferrer>LinkedIn</a>
-                                        </li>
-			                            <li>
-                                            <i class="fa fa-github"></i>
-                                            <a class="white" href="https://github.com/killiadmin" rel="noopener" noreferrer>Github</a>
                                         </li>
 			                        </ul>
                                 </div>
